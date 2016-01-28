@@ -1,0 +1,30 @@
+@font-face{
+	font-family: 'bg-black';
+	src: url('../fonts/bg-black.eot'),
+		url('../fonts/bg-black.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/bg-black.woff2') format('woff2'),
+		url('../fonts/bg-black.ttf') format('truetype'),
+		url('../fonts/bg-black.svg#bg-black') format('svg');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face{
+	font-family: 'bg-bold';
+	src: url('../fonts/bg-bold.eot');
+	src: url('../fonts/bg-bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bg-bold.woff2') format('woff2'),
+         url('../fonts/bg-bold.ttf') format('truetype'),
+         url('../fonts/bg-bold.svg#bg-bold') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face{
+	font-family: 'bg-medium';
+	src: url('../fonts/bg-medium.eot');
+	src: url('../fonts/bg-medium.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bg-medium.woff2') format('woff2'),
+         url('../fonts/bg-medium.ttf') format('truetype'),
+         url('../fonts/bg-medium.svg#bg-medium') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
