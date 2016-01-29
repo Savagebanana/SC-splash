@@ -22,8 +22,11 @@ html, body
 				padding-top: $mb
 				@media (max-height: 420px)
 					padding-top: 2%
-				img
+				@media (max-width: 400px)
+					padding-top: 10%
+				svg
 					width: 250px
+					height: 70px
 			.cta
 				width: 75%
 				position: relative
@@ -85,6 +88,8 @@ html, body
 				padding-bottom: $mb
 				@media (max-height: 420px)
 					padding-bottom: 2%
+				@media (max-width: 400px)
+					padding-bottom: 10%
 				span
 					width: 100%
 					display: flex

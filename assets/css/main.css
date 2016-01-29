@@ -438,8 +438,12 @@ html, body {
         @media (max-height: 420px) {
           html .splash .wrapper .logo, body .splash .wrapper .logo {
             padding-top: 2%; } }
-        html .splash .wrapper .logo img, body .splash .wrapper .logo img {
-          width: 250px; }
+        @media (max-width: 400px) {
+          html .splash .wrapper .logo, body .splash .wrapper .logo {
+            padding-top: 10%; } }
+        html .splash .wrapper .logo svg, body .splash .wrapper .logo svg {
+          width: 250px;
+          height: 70px; }
       html .splash .wrapper .cta, body .splash .wrapper .cta {
         width: 75%;
         position: relative; }
@@ -507,6 +511,9 @@ html, body {
         @media (max-height: 420px) {
           html .splash .wrapper footer, body .splash .wrapper footer {
             padding-bottom: 2%; } }
+        @media (max-width: 400px) {
+          html .splash .wrapper footer, body .splash .wrapper footer {
+            padding-bottom: 10%; } }
         html .splash .wrapper footer span, body .splash .wrapper footer span {
           width: 100%;
           display: -webkit-box;
