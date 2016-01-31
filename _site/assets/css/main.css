@@ -406,14 +406,19 @@ h2 {
 
 html, body {
   height: 100%;
+  overflow: hidden;
   background-image: url(../images/bg_splash.jpg);
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat; }
+  @media (max-width: 320px) {
+    html, body {
+      height: 112%; } }
   html .splash, body .splash {
     position: relative;
     height: 100%; }
     html .splash .wrapper, body .splash .wrapper {
+      position: relative;
       width: 45%;
       height: 100%;
       display: -webkit-box;
@@ -433,6 +438,9 @@ html, body {
       @media (max-width: 780px) {
         html .splash .wrapper, body .splash .wrapper {
           width: 80%; } }
+      @media (max-width: 320px) {
+        html .splash .wrapper, body .splash .wrapper {
+          display: block; } }
       html .splash .wrapper .logo, body .splash .wrapper .logo {
         padding-top: 14%; }
         @media (max-height: 420px) {
@@ -444,27 +452,34 @@ html, body {
         html .splash .wrapper .logo svg, body .splash .wrapper .logo svg {
           width: 250px;
           height: 70px; }
+          @media (max-width: 380px) {
+            html .splash .wrapper .logo svg, body .splash .wrapper .logo svg {
+              width: 166px;
+              height: 47px; } }
       html .splash .wrapper .cta, body .splash .wrapper .cta {
         width: 75%;
         position: relative; }
+        @media (max-width: 320px) {
+          html .splash .wrapper .cta, body .splash .wrapper .cta {
+            margin-top: 2.8rem; } }
         html .splash .wrapper .cta:before, body .splash .wrapper .cta:before {
           content: '';
           width: 50%;
           height: 3px;
           position: absolute;
-          top: -20%;
+          top: -1.5rem;
           left: 0;
           background-color: #f8b620; }
           @media (max-height: 420px) {
             html .splash .wrapper .cta:before, body .splash .wrapper .cta:before {
-              top: -10%; } }
+              top: -0.9rem; } }
           @media (max-width: 380px) {
             html .splash .wrapper .cta:before, body .splash .wrapper .cta:before {
-              top: -6%; } }
+              top: -1.8rem; } }
         html .splash .wrapper .cta p, body .splash .wrapper .cta p {
           color: #fff;
           font-family: 'bg-medium';
-          font-size: 1rem;
+          font-size: 1.1rem;
           line-height: 2rem;
           letter-spacing: 0.1rem; }
           @media (max-height: 420px) {
@@ -478,7 +493,7 @@ html, body {
           display: -webkit-flex;
           display: -ms-flexbox;
           display: flex;
-          margin: 1.4rem 0;
+          margin-top: 1.4rem;
           -webkit-box-align: center;
           -webkit-align-items: center;
               -ms-flex-align: center;
@@ -514,6 +529,10 @@ html, body {
         @media (max-width: 400px) {
           html .splash .wrapper footer, body .splash .wrapper footer {
             padding-bottom: 10%; } }
+        @media (max-width: 320px) {
+          html .splash .wrapper footer, body .splash .wrapper footer {
+            margin-top: 2.8rem;
+            margin-bottom: 5%; } }
         html .splash .wrapper footer span, body .splash .wrapper footer span {
           width: 100%;
           display: -webkit-box;

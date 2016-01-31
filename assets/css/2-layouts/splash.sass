@@ -1,15 +1,19 @@
 
 html, body
 	height: 100%
+	overflow: hidden
 	background:
 		image: url(../images/bg_splash.jpg)
 		size: cover
 		position: center bottom
 		repeat: no-repeat
+	@media (max-width: 320px)
+		height: 112%
 	.splash
 		position: relative
 		height: 100%
 		.wrapper
+			position: relative
 			width: 45%
 			height: 100%
 			display: flex
@@ -18,6 +22,8 @@ html, body
 			margin-left: $ml
 			@media (max-width: 780px)
 				width: 80%
+			@media (max-width: 320px)
+				display: block
 			.logo
 				padding-top: $mb
 				@media (max-height: 420px)
@@ -27,37 +33,45 @@ html, body
 				svg
 					width: 250px
 					height: 70px
+					@media (max-width: 380px)
+						width: 166px
+						height: 47px
 			.cta
 				width: 75%
 				position: relative
+				@media (max-width: 320px)
+					margin-top: $i5+2rem
 
 				&:before
 					content: ''
 					width: 50%
 					height: 3px
 					position: absolute
-					top: -20%
+					top: -1.5rem
 					left: 0
 					background-color: $yellow
 					@media (max-height: 420px)
-						top: -10%
+						top: -$i6
 					@media (max-width: 380px)
-						top: -6%
-
+						top: -1.8rem
+					// @media (max-width: 320px)
+					// 	top: -$i5 - 0.3rem
 				p
 					color: #fff
 					font:
 						family: 'bg-medium'
-						size: 1rem
+						size: 1.1rem
 					line-height: 2rem
 					letter-spacing: 0.1rem
 					@media (max-height: 420px)
 						line-height: 1.2em
 					@media (max-width: 380px)
 						line-height: 1.8rem
+					// @media (max-width: 320px)
+					// 	line-height: 1.5rem
 				a.btn_cta
 					display: flex
-					margin: 1.4rem 0
+					margin-top: 1.4rem
 					align-items: center
 					position: relative
 					padding-left: 20px
@@ -69,8 +83,8 @@ html, body
 					&:hover
 						background-color: $yellow - 10
 						box-shadow: -1px 1px 5px rgba(0,0,0,0.5)
-
-
+					// @media (max-width: 320px)
+					// 	margin-top: $i5
 					svg
 						width: 11px
 						height: 11px
@@ -90,6 +104,9 @@ html, body
 					padding-bottom: 2%
 				@media (max-width: 400px)
 					padding-bottom: 10%
+				@media (max-width: 320px)
+					margin-top: $i5+2rem
+					margin-bottom: 5%
 				span
 					width: 100%
 					display: flex
