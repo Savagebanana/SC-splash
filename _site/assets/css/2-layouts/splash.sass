@@ -1,34 +1,40 @@
 
 html, body
 	height: 100%
-	overflow: hidden
+	overflow: scroll
 	background:
-		image: url(../images/bg_splash.jpg)
+		image: url(../images/bg_splash02.jpg)
 		size: cover
-		position: center bottom
+		position: center top
 		repeat: no-repeat
-	@media (max-width: 320px)
-		height: 112%
+	@media (max-width: 1024px)
+		background-position: 20% 20%
+	@media (max-width: 400px)
+		background-position: 20% -50%
 	.splash
 		position: relative
 		height: 100%
 		.wrapper
+			box-sizing: border-box
+			position: relative
 			width: 45%
 			height: 100%
+			margin: 3em 0
 			display: flex
 			flex-direction: column
 			justify-content: space-between
 			margin-left: $ml
 			@media (max-width: 780px)
 				width: 80%
-			@media (max-width: 320px)
+			@media (max-width: 400px)
 				display: block
+
 			.logo
-				padding-top: $mb
+				// padding-top: $mb
 				@media (max-height: 420px)
-					padding-top: 2%
+					// padding-top: 2%
 				@media (max-width: 400px)
-					padding-top: 10%
+					// padding-top: 10%
 				svg
 					width: 250px
 					height: 70px
@@ -38,7 +44,7 @@ html, body
 			.cta
 				width: 75%
 				position: relative
-				@media (max-width: 320px)
+				@media (max-width: 400px)
 					margin-top: $i5+2rem
 
 				&:before
@@ -52,11 +58,11 @@ html, body
 					@media (max-height: 420px)
 						top: -$i6
 					@media (max-width: 380px)
-						top: -1rem
+						top: -1.8rem
 					// @media (max-width: 320px)
 					// 	top: -$i5 - 0.3rem
 				p
-					color: #fff
+					color: black
 					font:
 						family: 'bg-medium'
 						size: 1.1rem
@@ -98,41 +104,91 @@ html, body
 						letter-spacing: 0.05rem
 						font-family: 'bg-bold'
 			footer
-				padding-bottom: $mb
+				// padding-bottom: $mb
+				display: flex
 				@media (max-height: 420px)
 					padding-bottom: 2%
 				@media (max-width: 400px)
-					padding-bottom: 10%
-				@media (max-width: 320px)
-					margin-top: $i5+2rem
-					margin-bottom: 5%
-				span
-					width: 100%
-					display: flex
-					align-items: center
-					justify-content: flex-start
+					// padding-bottom: 2em
+					padding-top: 2em
+					flex-direction: column
 
+				.sec
+					margin-top: 1.3em
+				.sec-loc
+					order: 3
+					flex: 2
+					@media (max-width: 400px)
+						order: 2
+						flex: 1
+					span
+						width: 100%
+						display: flex
+						align-items: center
+						justify-content: flex-start
+
+						svg
+							fill: none
+							stroke: black
+							stroke-weight: 5px
+
+							height: 16px
+							width: 16px
+							margin: 0
+							padding-right: .5em
+						p
+							font-family: 'bg-bold'
+							font-size: 0.8rem
+							line-height: 1.4rem
+							color: black
+							// padding-left: 8px
+							text-transform: uppercase
+					p
+						font-family: 'bg-medium'
+						font-size: 0.8rem
+						width: 200px
+						color: $grey
+						text-transform: uppercase
+						letter-spacing: 0.1rem
+						line-height: 1.4rem
+				.sec-name
+					order: 2
+					flex: 2
+					@media (max-width: 400px)
+						order: 1
+						flex: 1
+					span
+						width: 100%
+						p
+							font-family: 'bg-bold'
+							font-size: 0.8rem
+							line-height: 1.4rem
+							color: black
+							// padding-left: 8px
+							text-transform: uppercase
+					p
+						font-family: 'bg-medium'
+						font-size: 0.8rem
+						width: 200px
+						color: $grey
+						text-transform: uppercase
+						letter-spacing: 0.1rem
+						line-height: 1.4rem
+
+				.sec-icon
+					order: 1
+					flex: 1
+					cursor: pointer
+					@media (max-width: 400px)
+						order: 3
+						flex: 1
+						margin-top: 2em
 					svg
-						fill: none
-						stroke: white
-						stroke-weight: 5px
-
-						height: 16px
-						width: 16px
+						height: 4em
+						width: 4em
+						fill: black
 						margin: 0
 						padding: 0
-					p
-						font-family: 'bg-bold'
-						font-size: 0.8rem
-						line-height: 1.4rem
-						color: white
-						padding-left: 8px
-						text-transform: uppercase
-				p
-					font-family: 'bg-medium'
-					font-size: 0.8rem
-					width: 200px
-					color: $grey
-					text-transform: uppercase
-					letter-spacing: 0.1rem
-					line-height: 1.4rem
+						@media (max-width: 400px)
+							height: 2em
+							width: 2em
